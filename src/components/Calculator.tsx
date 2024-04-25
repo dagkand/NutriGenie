@@ -118,6 +118,7 @@ function App() {
         <button onClick={calculateCalories}>Calculate</button>
       </div>
       <div className='input-group'>
+        <p>BMR: {BMR}</p>
         <p>Calories: {calories}</p>
       </div>
     </div>
