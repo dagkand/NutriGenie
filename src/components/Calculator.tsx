@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import '../App.css';
 
 function App() {
@@ -80,6 +80,7 @@ function App() {
             <option value='athlete'>Athlete (very hard exercise/sports & physical job or 2x training)</option>
           </select>
         </label>
+        <div className='input-group'></div>
         <button>Calculate</button>
       </div>
       {/* Calculator screen or other components can be added here */}

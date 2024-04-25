@@ -1,4 +1,4 @@
-import viteLogo from '/vite.svg'
+import Logo from './media/logo.png'
 import { useTypewriter, Cursor} from 'react-simple-typewriter'
 
 import '../App.css'
@@ -13,12 +13,12 @@ function App() {
 
   return (
     <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+        <a href="https://github.com/dagkand" target="_blank">
+          <img src={Logo} className="logo" alt="NutriGenie" />
         </a>
         <h1 style={{margin: '50px'}}>
           I will help you {' '}
-          <span style={{fontWeight: 'bold', color: 'green'}}>
+          <span style={{fontWeight: 'bold', color: '#f62d2d'}}>
             {text}
           </span>
           <Cursor />

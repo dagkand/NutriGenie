@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  place-items: center;
 }
 
 .logo {
@@ -25,3 +26,18 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.calculator {
+  border: #646cffaa 1px solid;
+}
+
+.input-group {
+  max-width: 100%;
+  padding-top: 1vh;
+}
+
+.results {
+  padding-top: 5vh;
+}
+
