@@ -6,6 +6,7 @@ function App() {
   const [weight, setWeight] = useState(0);
   const [height, setHeight] = useState(0);
   const [activityLevel, setActivityLevel] = useState('');
+  const [bmr, setBMR] = useState(0);
   const [calories, setCalories] = useState(0);
 
   const handleGenderChange = (event) => {
@@ -26,35 +27,36 @@ function App() {
 
   const calculateCalories = () => {
     // Calculate BMR
-    let bmr = 0;
+    let temp = 0;
     if (gender === 'male') {
-      bmr = 10 * weight + 6.25 * height - 5 * 25 + 5; // Adjust 25 for age
+      temp = 10 * weight + 6.25 * height - 5 * 25 + 5; // Adjust 25 for age
     } else if (gender === 'female') {
-      bmr = 10 * weight + 6.25 * height - 5 * 25 - 161; // Adjust 25 for age and 161 for gender
+      temp = 10 * weight + 6.25 * height - 5 * 25 - 161; // Adjust 25 for age and 161 for gender
     }
+    setBMR(temp);
 
     // Adjust BMR based on activity level
     switch (activityLevel) {
       case 'sedentary':
-        bmr *= 1.2;
+        temp *= 1.2;
         break;
       case 'light':
-        bmr *= 1.375;
+        temp *= 1.375;
         break;
       case 'moderate':
-        bmr *= 1.55;
+        temp *= 1.55;
         break;
       case 'heavy':
-        bmr *= 1.725;
+        temp *= 1.725;
         break;
       case 'athlete':
-        bmr *= 1.9;
+        temp *= 1.9;
         break;
       default:
         break;
     }
 
-    setCalories(bmr);
+    setCalories(temp);
   };
 
   return (
@@ -118,7 +120,7 @@ function App() {
         <button onClick={calculateCalories}>Calculate</button>
       </div>
       <div className='input-group'>
-        <p>BMR: {BMR}</p>
+        <p>BMR: {bmr}</p>
         <p>Calories: {calories}</p>
       </div>
     </div>
