@@ -34,7 +34,7 @@ function App() {
       temp = 10 * weight + 6.25 * height - 5 * 25 - 161; // Adjust 25 for age and 161 for gender
     }
     setBMR(temp);
-
+  
     // Adjust BMR based on activity level
     switch (activityLevel) {
       case 'sedentary':
@@ -55,10 +55,10 @@ function App() {
       default:
         break;
     }
-
+  
     setCalories(temp);
   };
-
+  
   return (
     <div className='calculator'>
       <div className='input-group'>
