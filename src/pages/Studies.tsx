@@ -1,11 +1,14 @@
 import '../App.css'
+import Navbar from '../components/Navbar'
+import Calories from '../components/Calories'
 
 function Studies() {
 
   return (
-    <div className='results'>
-        <h1>Results</h1>
-    </div>
+    <>
+    <Navbar />
+    <Calories />
+    </>
   )
 }
 

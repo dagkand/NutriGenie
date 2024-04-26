@@ -1,11 +1,14 @@
 import '../App.css'
+import Navbar from '../components/Navbar'
+import Title from '../components/Title'
 
 function About() {
 
   return (
-    <div className='about'>
-        <h1>Results</h1>
-    </div>
+    <>
+    <Navbar />
+    <Title />
+    </>
   )
 }
 

@@ -1,11 +1,14 @@
 import '../App.css'
+import Navbar from '../components/Navbar'
+import Macros from '../components/Macros'
 
 function Positive() {
 
   return (
-    <div className='results'>
-        <h1>Results</h1>
-    </div>
+    <>
+    <Navbar />
+    <Macros />
+    </>
   )
 }
 
