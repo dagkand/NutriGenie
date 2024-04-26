@@ -1,3 +1,4 @@
+import Navbar from './components/Navbar'
 import Title from './components/Title'
 import Calculator from './components/Calculator'
 import Results from './components/Results'
@@ -7,6 +8,7 @@ function App() {
   
   return (
     <>
+      <Navbar />
       <Title />
       <Calculator />
       <Results />

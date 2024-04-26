@@ -5,6 +5,7 @@ function App() {
   const [gender, setGender] = useState('');
   const [weight, setWeight] = useState(0);
   const [height, setHeight] = useState(0);
+  const [age, setAge] = useState(0); // New state variable for age
   const [activityLevel, setActivityLevel] = useState('');
   const [bmr, setBMR] = useState(0);
   const [calories, setCalories] = useState(0);
@@ -21,6 +22,10 @@ function App() {
     setHeight(event.target.value);
   };
 
+  const handleAgeChange = (event) => { // Handler for age change
+    setAge(event.target.value);
+  };
+
   const handleActivityLevelChange = (event) => {
     setActivityLevel(event.target.value);
   };
@@ -29,9 +34,9 @@ function App() {
     // Calculate BMR
     let temp = 0;
     if (gender === 'male') {
-      temp = 10 * weight + 6.25 * height - 5 * 25 + 5; // Adjust 25 for age
+      temp = 10 * weight + 6.25 * height - 5 * age + 5; // Adjusted for age
     } else if (gender === 'female') {
-      temp = 10 * weight + 6.25 * height - 5 * 25 - 161; // Adjust 25 for age and 161 for gender
+      temp = 10 * weight + 6.25 * height - 5 * age - 161; // Adjusted for age and gender
     }
     setBMR(temp);
   
@@ -85,6 +90,17 @@ function App() {
       </div>
       <div className='input-group'>
         <label>
+          Age: {/* Adding input for age */}
+          <input
+            type='number'
+            value={age}
+            onChange={handleAgeChange}
+            placeholder='Enter age'
+          />
+        </label>
+      </div>
+      <div className='input-group'>
+        <label>
           Weight:
           <input
             type='number'
@@ -109,16 +125,16 @@ function App() {
         <label>
           Activity Level:
           <select value={activityLevel} onChange={handleActivityLevelChange}>
-            <option value='sedentary'>Sedentary (little to no exercise)</option>
-            <option value='light'>Lightly active (light exercise/sports 1-3 days/week)</option>
-            <option value='moderate'>Moderately active (moderate exercise/sports 3-5 days/week)</option>
-            <option value='heavy'>Very active (hard exercise/sports 6-7 days a week)</option>
-            <option value='athlete'>Athlete (very hard exercise/sports & physical job or 2x training)</option>
+            <option value='sedentary'>Sedentary</option>
+            <option value='light'>Lightly active</option>
+            <option value='moderate'>Moderately active</option>
+            <option value='heavy'>Very active</option>
+            <option value='athlete'>Athlete</option>
           </select>
         </label>
-        <div className='input-group'></div>
-        <button onClick={calculateCalories}>Calculate</button>
       </div>
+      <div className='input-group'></div>
+      <button onClick={calculateCalories}>Calculate</button>
       <div className='input-group'>
         <p>BMR: {bmr}</p>
         <p>Calories: {calories}</p>
