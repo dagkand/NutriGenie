@@ -8,7 +8,7 @@ function Navbar() {
         <img src={Logo} alt="Logo" className="logo" /> {/* Insert the logo */}
         <ul className="navbar-list">
             <li><Link to="/">Home</Link></li>
-            <li><Link to="/studies">Macros</Link></li>
+            <li><Link to="/macros">Macros</Link></li>
             <li><Link to="/positive">Why and How?</Link></li>
             <li><Link to="/about">About</Link></li>
         </ul>

@@ -1,13 +1,13 @@
 import '../App.css'
 import Navbar from '../components/Navbar'
-import Macros from '../components/Macros'
+import Whyandhow from '../components/Whyandhow'
 
 function Positive() {
 
   return (
     <>
     <Navbar />
-    <Macros />
+    <Whyandhow />
     </>
   )
 }

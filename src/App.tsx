@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import About from './pages/About';
 import Home from './pages/Home';
 import Positive from './pages/Positive';
-import Studies from './pages/Studies';
+import Macros from './pages/Macros';
 import './App.css';
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/positive" element={<Positive />} />
-        <Route path="/studies" element={<Studies />} />
+        <Route path="/macros" element={<Macros />} />
       </Routes>
     </Router>
   );
