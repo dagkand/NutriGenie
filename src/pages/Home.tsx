@@ -13,7 +13,7 @@ function Home() {
       <Title />
       <Calculator />
       {/* <Results /> */}
-      <Graph />
+      {/* <Graph /> */}
     </>
   )
 }

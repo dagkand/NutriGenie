@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import '../App.css';
 
 function Calculator() {
@@ -127,20 +127,22 @@ function Calculator() {
           </select>
         </label>
       </div>
+      {showWhatNow && ( // Render result section conditionally
+        <div className='input-group' id='results'>
+          <h2>Your calorie needs</h2>
+          <p>BMR: {bmr}</p>
+          <p>Calories: {calories}</p>
+        </div>
+      )}
       <div className='input-group'></div>
       <button onClick={calculateCalories}>Calculate</button>
       {showWhatNow && (
         <div className='input-group'>
-          <p onClick={scrollToResults} style={{ cursor: 'pointer' }}>
-            What now
-          </p>
+          <h1 onClick={scrollToResults} style={{ cursor: 'pointer' }}>
+            What now?
+          </h1>
         </div>
       )}
-      <div className='input-group' id='results'>
-        <h2>Your calorie needs</h2>
-        <p>BMR: {bmr}</p>
-        <p>Calories: {calories}</p>
-      </div>
     </div>
   );
 }

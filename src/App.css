@@ -44,9 +44,10 @@ button:hover {
 
 
 .calculator {
-  border: #646cffaa 1px solid;
+  /* border: #646cffaa 1px solid; */
   width: 50vh;
   margin: 0 auto;
+  padding-top: 10vh;
 }
 
 .input-group {
@@ -61,7 +62,7 @@ button:hover {
 
 .input-group input,
 .input-group select {
-  width: 50%; /* Make inputs expand to fill the width of their container */
+  width: 30%; /* Make inputs expand to fill the width of their container */
   padding: 0.5rem; /* Add padding to inputs for better spacing */
   border: 1px solid #ccc; /* Add a light border to inputs */
   border-radius: 4px; /* Apply border radius for rounded corners */
