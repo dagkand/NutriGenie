@@ -68,25 +68,13 @@ function Calculator() {
   return (
     <div className='calculator'>
       <div className='input-group'>
-        <label>
-          <input
-            type='radio'
-            name='gender'
-            value='male'
-            checked={gender === 'male'}
-            onChange={handleGenderChange}
-          />
-          Male
-        </label>
-        <label>
-          <input
-            type='radio'
-            name='gender'
-            value='female'
-            checked={gender === 'female'}
-            onChange={handleGenderChange}
-          />
-          Female
+        <label className='activitylvl'>
+          Gender:
+          <select value={gender} onChange={handleGenderChange}>
+            <option value=''>Select gender</option>
+            <option value='male'>Male</option>
+            <option value='female'>Female</option>
+          </select>
         </label>
       </div>
       <div className='input-group'>
