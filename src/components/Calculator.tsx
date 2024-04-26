@@ -1,6 +1,5 @@
-import { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import '../App.css';
-import Results from './Results'
 
 function Calculator() {
   const [gender, setGender] = useState('');
@@ -10,6 +9,7 @@ function Calculator() {
   const [activityLevel, setActivityLevel] = useState('');
   const [bmr, setBMR] = useState(0);
   const [calories, setCalories] = useState(0);
+  const [showWhatNow, setShowWhatNow] = useState(false);
 
   const handleGenderChange = (event) => {
     setGender(event.target.value);
@@ -23,7 +23,7 @@ function Calculator() {
     setHeight(event.target.value);
   };
 
-  const handleAgeChange = (event) => { // Handler for age change
+  const handleAgeChange = (event) => {
     setAge(event.target.value);
   };
 
@@ -32,16 +32,14 @@ function Calculator() {
   };
 
   const calculateCalories = () => {
-    // Calculate BMR
     let temp = 0;
     if (gender === 'male') {
-      temp = 10 * weight + 6.25 * height - 5 * age + 5; // Adjusted for age
+      temp = 10 * weight + 6.25 * height - 5 * age + 5;
     } else if (gender === 'female') {
-      temp = 10 * weight + 6.25 * height - 5 * age - 161; // Adjusted for age and gender
+      temp = 10 * weight + 6.25 * height - 5 * age - 161;
     }
     setBMR(temp);
-  
-    // Adjust BMR based on activity level
+
     switch (activityLevel) {
       case 'sedentary':
         temp *= 1.2;
@@ -61,10 +59,17 @@ function Calculator() {
       default:
         break;
     }
-  
+
     setCalories(temp);
+    setShowWhatNow(true);
   };
-  
+
+  const scrollToResults = () => {
+    // Scroll to the results section
+    const resultsSection = document.getElementById('results');
+    resultsSection.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div className='calculator'>
       <div className='input-group'>
@@ -79,7 +84,7 @@ function Calculator() {
       </div>
       <div className='input-group'>
         <label>
-          Age: {/* Adding input for age */}
+          Age:
           <input
             type='number'
             value={age}
@@ -124,8 +129,17 @@ function Calculator() {
       </div>
       <div className='input-group'></div>
       <button onClick={calculateCalories}>Calculate</button>
-      <div className='input-group'>
-        <Results bmr={bmr} calories={calories} />
+      {showWhatNow && (
+        <div className='input-group'>
+          <p onClick={scrollToResults} style={{ cursor: 'pointer' }}>
+            What now
+          </p>
+        </div>
+      )}
+      <div className='input-group' id='results'>
+        <h2>Your calorie needs</h2>
+        <p>BMR: {bmr}</p>
+        <p>Calories: {calories}</p>
       </div>
     </div>
   );
