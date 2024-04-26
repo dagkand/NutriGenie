@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../App.css';
 import Results from './Results'
 
-function App() {
+function Calculator() {
   const [gender, setGender] = useState('');
   const [weight, setWeight] = useState(0);
   const [height, setHeight] = useState(0);
@@ -123,7 +123,7 @@ function App() {
         </label>
       </div>
       <div className='input-group'>
-        <label>
+        <label className='activitylvl'>
           Activity Level:
           <select value={activityLevel} onChange={handleActivityLevelChange}>
             <option value='sedentary'>Sedentary</option>
@@ -143,4 +143,4 @@ function App() {
   );
 }
 
-export default App;
+export default Calculator;

@@ -45,12 +45,49 @@ button:hover {
 
 .calculator {
   border: #646cffaa 1px solid;
+  width: 50vh;
+  margin: 0 auto;
 }
 
 .input-group {
-  max-width: 100vh;
-  padding-top: 1vh;
+  margin-bottom: 1.5rem; /* Add some vertical space between input groups */
 }
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem; /* Add space below each label */
+  font-weight: bold; /* Make labels bold for better visibility */
+}
+
+.input-group input,
+.input-group select {
+  width: 50%; /* Make inputs expand to fill the width of their container */
+  padding: 0.5rem; /* Add padding to inputs for better spacing */
+  border: 1px solid #ccc; /* Add a light border to inputs */
+  border-radius: 4px; /* Apply border radius for rounded corners */
+  font-size: 1rem; /* Adjust font size for consistency */
+}
+
+.input-group select {
+  appearance: none; /* Remove default select styles */
+  background-color: #fff; /* Set background color for consistency */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath fill='%236b7280' d='M5.8 8.2l4.8 4.8 4.8-4.8c.4-.4.9-.4 1.3 0s.4.9 0 1.3l-5.5 5.5c-.2.2-.4.3-.7.3-.3 0-.5-.1-.7-.3l-5.5-5.5c-.4-.4-.4-.9 0-1.3.4-.4.9-.4 1.3 0z'/%3E%3C/svg%3E"); /* Add custom arrow icon for select */
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center; /* Position the arrow icon */
+  padding-right: 2rem; /* Ensure enough space for the arrow icon */
+}
+
+.input-group input::placeholder,
+.input-group select option {
+  color: #a0aec0; /* Adjust placeholder color for better visibility */
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none; /* Remove default focus outline */
+  border-color: #64748b; /* Change border color on focus */
+}
+
 
 .results {
   padding-top: 5vh;
@@ -108,4 +145,10 @@ button:hover {
 
 .titletext {
   padding-top: 100px;
+  width: 100vh;
+  position: static;
+}
+
+.activitylvl {
+  color: black;
 }
