@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import '../App.css';
+import Results from './Results'
 
 function App() {
   const [gender, setGender] = useState('');
   const [weight, setWeight] = useState(0);
   const [height, setHeight] = useState(0);
-  const [age, setAge] = useState(0); // New state variable for age
+  const [age, setAge] = useState(0);
   const [activityLevel, setActivityLevel] = useState('');
   const [bmr, setBMR] = useState(0);
   const [calories, setCalories] = useState(0);
@@ -136,8 +137,7 @@ function App() {
       <div className='input-group'></div>
       <button onClick={calculateCalories}>Calculate</button>
       <div className='input-group'>
-        <p>BMR: {bmr}</p>
-        <p>Calories: {calories}</p>
+        <Results bmr={bmr} calories={calories} />
       </div>
     </div>
   );

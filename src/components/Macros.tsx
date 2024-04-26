@@ -19,6 +19,7 @@ function About() {
         <li>Each macronutrient plays a distinct role in your body's functions, energy production, and overall health.</li>
         <li>Optimizing your macro split can help you achieve better performance in workouts, improve recovery, and support muscle growth.</li>
         <li>It allows for more precise control over your nutrient intake, which is essential for reaching specific fitness goals.</li>
+        <p>https://pubmed.ncbi.nlm.nih.gov/1400008/</p>
         </ul>
         <p>By combining knowledge of your BMR with an appropriate macro split, you can develop a nutrition strategy that supports your individual needs, promotes overall well-being, and enhances your fitness journey.</p>
 

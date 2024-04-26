@@ -1,12 +1,18 @@
 import '../App.css'
 
-function Results() {
-
-  return (
-    <div className='results'>
-        <h1>Results</h1>
-    </div>
-  )
+interface ResultsProps {
+  bmr: number;
+  calories: number;
 }
 
-export default Results
+function Results({ bmr, calories }: ResultsProps) {
+  return (
+    <div className='results'>
+      <h1>Results</h1>
+      <p>BMR: {bmr}</p>
+      <p>Calories: {calories}</p>
+    </div>
+  );
+}
+
+export default Results;
