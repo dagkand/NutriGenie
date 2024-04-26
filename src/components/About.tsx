@@ -1,12 +1,12 @@
 import '../App.css'
 
-function App() {
+function About() {
 
   return (
-    <div className='results'>
+    <div className='about'>
         <h1>Results</h1>
     </div>
   )
 }
 
-export default App
+export default About

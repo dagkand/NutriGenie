@@ -1,6 +1,6 @@
 import '../App.css'
 
-function App() {
+function Positive() {
 
   return (
     <div className='results'>
@@ -9,4 +9,4 @@ function App() {
   )
 }
 
-export default App
+export default Positive
