@@ -11,7 +11,7 @@ function Title() {
   });
 
   return (
-    <div>
+    <div className='titletext'>
       <h1 style={{margin: '50px'}}>
         I will help you {' '}
         <span style={{fontWeight: 'bold', color: '#f62d2d'}}>
