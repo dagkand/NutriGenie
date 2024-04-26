@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar'
 import Title from '../components/Title'
 import Calculator from '../components/Calculator'
 import Results from '../components/Results'
+import Graph from '../components/Graph'
 import '../App.css'
 
 function Home() {
@@ -11,7 +12,8 @@ function Home() {
       <Navbar />
       <Title />
       <Calculator />
-      <Results />
+      {/* <Results /> */}
+      <Graph />
     </>
   )
 }
