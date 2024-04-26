@@ -7,11 +7,12 @@
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 5em;
+  padding: 0; /* Remove padding to decrease space around the logo */
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #ad2121aa);
 }
@@ -55,3 +56,38 @@ button:hover {
   padding-top: 5vh;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Align logo to the left and navbar items to the right */
+  align-items: center; /* Vertically center items */
+  position: absolute;
+  top: 0;
+  left: 0; /* Position the navbar to the left */
+  width: 95%; /* Occupy full width */
+  padding: 20px; /* Add padding to create space around logo and navbar items */
+
+}
+
+.navbar-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  margin: 0; /* Remove default margin */
+}
+
+.navbar-list li {
+  margin-left: 20px; /* Add margin between navbar items */
+}
+
+.navbar-list li a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-list li a:hover {
+  color: #f62d2d; /* Change color on hover */
+}
+
+.navbar-list li:first-child {
+  margin-left: auto; /* Push the first navbar item to the right */
+}

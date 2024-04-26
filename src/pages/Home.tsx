@@ -2,9 +2,9 @@ import Navbar from '../components/Navbar'
 import Title from '../components/Title'
 import Calculator from '../components/Calculator'
 import Results from '../components/Results'
-import './App.css'
+import '../App.css'
 
-function App() {
+function Home() {
   
   return (
     <>
@@ -16,4 +16,4 @@ function App() {
   )
 }
 
-export default App
+export default Home

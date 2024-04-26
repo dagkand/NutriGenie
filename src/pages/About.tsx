@@ -1,13 +1,14 @@
 import '../App.css'
 import Navbar from '../components/Navbar'
-import Title from '../components/Title'
+import Motivation from '../components/Motivation'
+
 
 function About() {
 
   return (
     <>
     <Navbar />
-    <Title />
+    <Motivation />
     </>
   )
 }
