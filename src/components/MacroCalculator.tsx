@@ -78,7 +78,7 @@ function MacroCalculator() {
       </div>
       <div className='input-group'>
         <label>
-          Calories Needed:
+          Calorie goal (Calories needed + weight loss/gain):
           <input
             type='number'
             value={caloriesNeeded}

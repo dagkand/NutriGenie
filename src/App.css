@@ -135,12 +135,15 @@ button:hover {
 }
 
 .motivation {
-  padding-top: 100px;
+  padding-top: 20vh;
+  width: 100vh;
   text-align: left;
 }
 
 .macrosinfo {
-  padding-top: 100px;
+  padding-top: 20vh;
+  width: 100vh;
+  text-align: left;
 }
 
 .calories {
