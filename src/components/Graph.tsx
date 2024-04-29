@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import { PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
+import '../App.css';
 
 const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
 
@@ -107,7 +108,7 @@ function Graph() {
                   </Pie>
                 </PieChart>
               </ResponsiveContainer>
-              <p>Macro split for cutting</p>
+              <p className='graphText'>Macro split for cutting</p>
             </div>
             <div style={{ width: '33%' }}>
               <ResponsiveContainer width="100%" height={300}>
@@ -130,7 +131,7 @@ function Graph() {
                   </Pie>
                 </PieChart>
               </ResponsiveContainer>
-              <p>Macro split for maintaining</p>
+              <p className='graphText'>Macro split for maintaining</p>
             </div>
             <div style={{ width: '33%' }}>
               <ResponsiveContainer width="100%" height={300}>
@@ -153,7 +154,7 @@ function Graph() {
                   </Pie>
                 </PieChart>
               </ResponsiveContainer>
-              <p>Macro split for bulking</p>
+              <p className='graphText'>Macro split for bulking</p>
             </div>
           </div>
         )}

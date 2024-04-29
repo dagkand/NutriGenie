@@ -51,22 +51,23 @@ button:hover {
 }
 
 .input-group {
+  display: flex;
+  flex-direction: column; /* Align items vertically */
+  align-items: center; /* Center-align items horizontally */
   margin-bottom: 1.5rem; /* Add some vertical space between input groups */
 }
 
 .input-group label {
-  display: block;
   margin-bottom: 0.5rem; /* Add space below each label */
   font-weight: bold; /* Make labels bold for better visibility */
 }
 
 .input-group input,
 .input-group select {
-  width: 30%; /* Make inputs expand to fill the width of their container */
+  width: 100%; /* Make inputs expand to fill the width of their container */
+  max-width: 200px; /* Limit the maximum width of the inputs */
   padding: 0.5rem; /* Add padding to inputs for better spacing */
-  border: 1px solid #ccc; /* Add a light border to inputs */
-  border-radius: 4px; /* Apply border radius for rounded corners */
-  font-size: 1rem; /* Adjust font size for consistency */
+  margin-bottom: 0.5rem; /* Add space below each input */
 }
 
 .input-group select {
@@ -150,5 +151,9 @@ button:hover {
   padding-top: 100px;
   width: 100vh;
   position: static;
+}
+
+.graphText {
+  text-align: center;
 }
 

@@ -34,9 +34,9 @@ function Calculator() {
   const calculateCalories = () => {
     let temp = 0;
     if (gender === 'male') {
-      temp = 10 * weight + 6.25 * height - 5 * age + 5;
+      temp = Math.round(10 * weight + 6.25 * height - 5 * age + 5);
     } else if (gender === 'female') {
-      temp = 10 * weight + 6.25 * height - 5 * age - 161;
+      temp = Math.round(10 * weight + 6.25 * height - 5 * age - 161);
     }
     setBMR(temp);
 
@@ -60,7 +60,7 @@ function Calculator() {
         break;
     }
 
-    setCalories(temp);
+    setCalories(Math.round(temp));
     setShowWhatNow(true);
   };
 
