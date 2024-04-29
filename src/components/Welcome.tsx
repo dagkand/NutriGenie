@@ -13,7 +13,11 @@ function Welcome() {
       <p>Behind the scenes, a team of experts in nutrition, mathematics, and computer science collaborates to develop and validate the algorithms driving this platform. Their rigorous validation process ensures the accuracy and reliability of the recommendations provided, drawing upon peer-reviewed studies and empirical data.</p>
       
       <p>By leveraging the latest advancements in nutritional science and computational analysis, this website equips you with the tools and knowledge necessary to achieve your health and fitness goals. Whether you're aiming to lose weight, build muscle, or simply maintain a balanced diet, it serves as your indispensable companion on your journey towards optimal nutrition and wellness.</p>
-   
+      <div className='input-group'>
+          <h1 style={{ cursor: 'pointer' }}>
+            What now?
+          </h1>
+        </div>
     </div>
   )
 }

@@ -138,13 +138,6 @@ function Calculator() {
       )}
       <div className='input-group'></div>
       <button disabled={!isInputValid} onClick={calculateCalories}>Calculate</button>
-      {showWhatNow && (
-        <div className='input-group'>
-          <h1 onClick={scrollToResults} style={{ cursor: 'pointer' }}>
-            What now?
-          </h1>
-        </div>
-      )}
     </div>
   );
 }
