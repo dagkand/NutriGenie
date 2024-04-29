@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import MacroInfo from '../components/MacroInfo'
 import Graph from '../components/Graph'
 import MacroSplit from '../components/MacroSplit'
+import MacroCalculator from '../components/MacroCalculator'
 
 function Macros() {
 
@@ -12,6 +13,7 @@ function Macros() {
     <MacroInfo />
     <Graph />
     <MacroSplit />
+    <MacroCalculator />
     </>
   )
 }
