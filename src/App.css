@@ -127,7 +127,7 @@ button:hover {
 }
 
 .navbar-list li a:hover {
-  color: #f62d2d; /* Change color on hover */
+  text-decoration: underline; /* Add underline on hover */
 }
 
 .navbar-list li:first-child {
@@ -160,5 +160,16 @@ button:hover {
 
 .graphText {
   text-align: center;
+}
+
+.title-container {
+  padding-top: 25vh;
+}
+
+.welcome {
+  padding-top: 42.5vh;
+  width: 100vh;
+  text-align: left;
+  font-size: large;
 }
 

@@ -1,9 +1,8 @@
 import Navbar from '../components/Navbar'
 import Title from '../components/Title'
-import Calculator from '../components/Calculator'
-import Results from '../components/Results'
-import Graph from '../components/Graph'
+import Footer from '../components/Footer'
 import '../App.css'
+import Welcome from '../components/Welcome'
 
 function Home() {
   
@@ -11,9 +10,8 @@ function Home() {
     <>
       <Navbar />
       <Title />
-      <Calculator />
-      {/* <Results /> */}
-      {/* <Graph /> */}
+      <Footer />
+      <Welcome />
     </>
   )
 }
