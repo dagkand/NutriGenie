@@ -3,9 +3,9 @@ import '../App.css';
 
 function Calculator() {
   const [gender, setGender] = useState('');
-  const [weight, setWeight] = useState(0);
-  const [height, setHeight] = useState(0);
-  const [age, setAge] = useState(0);
+  const [weight, setWeight] = useState('');
+  const [height, setHeight] = useState('');
+  const [age, setAge] = useState('');
   const [activityLevel, setActivityLevel] = useState('');
   const [bmr, setBMR] = useState(0);
   const [calories, setCalories] = useState(0);
@@ -33,9 +33,9 @@ function Calculator() {
 
   const calculateCalories = () => {
     let temp = 0;
-    if (gender === 'male') {
+    if (gender === 'male' && weight && height && age && activityLevel) {
       temp = Math.round(10 * weight + 6.25 * height - 5 * age + 5);
-    } else if (gender === 'female') {
+    } else if (gender === 'female' && weight && height && age && activityLevel) {
       temp = Math.round(10 * weight + 6.25 * height - 5 * age - 161);
     }
     setBMR(temp);
@@ -69,6 +69,8 @@ function Calculator() {
     const resultsSection = document.getElementById('results');
     resultsSection.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const isInputValid = gender && weight && height && age && activityLevel;
 
   return (
     <div className='calculator'>
@@ -135,7 +137,7 @@ function Calculator() {
         </div>
       )}
       <div className='input-group'></div>
-      <button onClick={calculateCalories}>Calculate</button>
+      <button disabled={!isInputValid} onClick={calculateCalories}>Calculate</button>
       {showWhatNow && (
         <div className='input-group'>
           <h1 onClick={scrollToResults} style={{ cursor: 'pointer' }}>
